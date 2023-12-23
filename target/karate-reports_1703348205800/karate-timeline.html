@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"pool-1-thread-1","id":1},{"content":"pool-1-thread-2","id":2},{"content":"pool-1-thread-3","id":3},{"content":"pool-1-thread-4","id":4},{"content":"pool-1-thread-5","id":5}];
+var items = [{"id":1,"group":1,"content":"com\/api\/automation\/deleteRequest[1:7]","start":1703348164430,"end":1703348166413,"title":"com\/api\/automation\/deleteRequest[1:7] 23:16:04.430-23:16:06.413 Delete Valid Username","className":"failed"},{"id":2,"group":2,"content":"com\/api\/automation\/getLoginRequest[1:7]","start":1703348164430,"end":1703348166398,"title":"com\/api\/automation\/getLoginRequest[1:7] 23:16:04.430-23:16:06.398 Logs User Into The System"},{"id":3,"group":3,"content":"com\/api\/automation\/getLogoutRequest[1:7]","start":1703348164430,"end":1703348166397,"title":"com\/api\/automation\/getLogoutRequest[1:7] 23:16:04.430-23:16:06.397 Logs out current logged in user session"},{"id":4,"group":4,"content":"com\/api\/automation\/getUserNameRequest[1:7]","start":1703348164430,"end":1703348166413,"title":"com\/api\/automation\/getUserNameRequest[1:7] 23:16:04.430-23:16:06.413 Get User Name","className":"failed"},{"id":5,"group":5,"content":"com\/api\/automation\/getUserNameRequest[2:27]","start":1703348164430,"end":1703348166398,"title":"com\/api\/automation\/getUserNameRequest[2:27] 23:16:04.430-23:16:06.398 Get Invalid Username"},{"id":6,"group":3,"content":"com\/api\/automation\/postCreateUser[1:7]","start":1703348166408,"end":1703348167248,"title":"com\/api\/automation\/postCreateUser[1:7] 23:16:06.408-23:16:07.248 Create User"},{"id":7,"group":5,"content":"com\/api\/automation\/postCreateUserWithList[1:7]","start":1703348166407,"end":1703348167250,"title":"com\/api\/automation\/postCreateUserWithList[1:7] 23:16:06.407-23:16:07.250 Create User With List"},{"id":8,"group":2,"content":"com\/api\/automation\/putUpdateUser[1:7]","start":1703348166409,"end":1703348167252,"title":"com\/api\/automation\/putUpdateUser[1:7] 23:16:06.409-23:16:07.252 Change firstname and phone"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
