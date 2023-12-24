@@ -26,7 +26,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 });
 </script>
 
-    <title>com.api.automation.getLoginRequest</title>
+    <title>com.api.automation.2getLogoutRequest</title>
   </head>
   <body>
     <div id="root-container">
@@ -49,13 +49,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2023-12-23 11:16:07 PM</div>
+    <div>2023-12-24 12:43:27 PM</div>
   </div>
 </div>
 
         <div class="nav-container">
           <div class="nav-item passed">
-            <a href="#[1:7]"><span>[1:7]</span> <span>Logs User Into The System</span></a>
+            <a href="#[1:7]"><span>[1:7]</span> <span>Logs out current logged in user session</span></a>
           </div>
         </div>
       </div>
@@ -64,8 +64,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
           <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
           <span class="feature-label">Feature:</span>
-          <span class="feature-path">com/api/automation/getLoginRequest.feature</span><span class="feature-label">|</span>
-          <span class="feature-name">Login</span>
+          <span class="feature-path">com/api/automation/2getLogoutRequest.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Logout</span>
           <span class="feature-description"></span>
         </div>
         <div class="scenario">
@@ -76,12 +76,12 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
               </div>
               <div class="scenario-keyword">
                 Scenario: <span>[1:7]</span>
-                <span class="scenario-name">Logs User Into The System</span>
+                <span class="scenario-name">Logs out current logged in user session</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>1743</span>
+              <span>ms:</span>&nbsp;<span>1674</span>
             </div>
           </div>
           <div class="step-row">
@@ -113,7 +113,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.4">23:16:04.640 karate.env system property was: null 
+  <div class="preformatted" data-parent="0.4">12:43:25.317 karate.env system property was: null 
 </div>   
 
   
@@ -130,10 +130,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">5</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>print &quot;--User Login--&quot;</span>
+        <span>And</span>&nbsp;<span>print &quot;--User log Out--&quot;</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell passed">4</div>
   </div>
 
    
@@ -142,7 +142,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.5">23:16:04.656 [print] --User Login-- 
+  <div class="preformatted" data-parent="0.5">12:43:25.335 [print] --User log Out-- 
 </div>   
 
   
@@ -159,7 +159,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">8</div>
       
       <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>path &quot;user/login&quot;</span>
+        <span>When</span>&nbsp;<span>path &quot;user/logout&quot;</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -187,10 +187,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">9</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>param username = &quot;blackout123&quot;</span>
+        <span>And</span>&nbsp;<span>method get</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">1667</div>
   </div>
 
    
@@ -199,7 +199,27 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-     
+  <div class="preformatted" data-parent="0.9">12:43:25.636 request:
+1 &gt; GET https://petstore.swagger.io/v2/user/logout
+1 &gt; Host: petstore.swagger.io
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+12:43:27.001 response time in milliseconds: 1362
+1 &lt; 200
+1 &lt; Date: Sun, 24 Dec 2023 05:43:25 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 &lt; Server: Jetty(9.2.9.v20150224)
+{&quot;code&quot;:200,&quot;type&quot;:&quot;unknown&quot;,&quot;message&quot;:&quot;ok&quot;}
+
+</div>   
 
   
 
@@ -215,7 +235,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">10</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>param password = &quot;pass123&quot;</span>
+        <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -243,117 +263,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">11</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.12">
-      <div class="step-ref passed">12</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>method get</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1729</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.12">23:16:05.002 request:
-1 &gt; GET https://petstore.swagger.io/v2/user/login?password=pass123&amp;username=blackout123
-1 &gt; Accept: application/json
-1 &gt; Host: petstore.swagger.io
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
-1 &gt; Accept-Encoding: gzip,deflate
-
-
-23:16:06.349 response time in milliseconds: 1342
-1 &lt; 200
-1 &lt; Date: Sat, 23 Dec 2023 16:16:05 GMT
-1 &lt; Content-Type: application/json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Connection: keep-alive
-1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
-1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
-1 &lt; X-Expires-After: Sat Dec 23 17:16:05 UTC 2023
-1 &lt; X-Rate-Limit: 5000
-1 &lt; Server: Jetty(9.2.9.v20150224)
-{&quot;code&quot;:200,&quot;type&quot;:&quot;unknown&quot;,&quot;message&quot;:&quot;logged in user session:1703348165878&quot;}
-
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.13">
-      <div class="step-ref passed">13</div>
-      
-      <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 200</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.14">
-      <div class="step-ref passed">14</div>
-      
-      <div class="step-cell passed">
         <span>And</span>&nbsp;<span>print response</span>
       </div>
     </div>
-    <div class="time-cell passed">10</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -362,10 +275,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.14">23:16:06.399 [print] {
+  <div class="preformatted" data-parent="0.11">12:43:27.004 [print] {
   &quot;code&quot;: 200,
   &quot;type&quot;: &quot;unknown&quot;,
-  &quot;message&quot;: &quot;logged in user session:1703348165878&quot;
+  &quot;message&quot;: &quot;ok&quot;
 }
  
 </div>   

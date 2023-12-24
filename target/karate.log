@@ -497,3 +497,790 @@ classpath:com/api/automation/deleteRequest.feature:11
 23:16:49.617 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 5 of 7 (2 remaining) classpath:com/api/automation/postCreateUser.feature
 23:16:49.654 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 6 of 7 (1 remaining) classpath:com/api/automation/postCreateUserWithList.feature
 23:16:49.687 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 7 of 7 (0 remaining) classpath:com/api/automation/putUpdateUser.feature
+12:40:20.402 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+12:40:20.425 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1703396420421
+12:40:20.433 [main] DEBUG com.intuit.karate.Suite - waiting for 7 features to complete
+12:40:21.869 [pool-1-thread-3] INFO  com.intuit.karate - karate.env system property was: null 
+12:40:21.899 [pool-1-thread-5] INFO  com.intuit.karate - karate.env system property was: null 
+12:40:21.905 [pool-1-thread-2] INFO  com.intuit.karate - karate.env system property was: null 
+12:40:21.908 [pool-1-thread-4] INFO  com.intuit.karate - karate.env system property was: null 
+12:40:21.912 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+12:40:21.920 [pool-1-thread-1] INFO  com.intuit.karate - [print] --Create User-- 
+12:40:21.920 [pool-1-thread-5] INFO  com.intuit.karate - [print] --Get User Data-- 
+12:40:21.923 [pool-1-thread-3] INFO  com.intuit.karate - [print] --User Login-- 
+12:40:21.923 [pool-1-thread-2] INFO  com.intuit.karate - [print] --Create User With List-- 
+12:40:21.924 [pool-1-thread-4] INFO  com.intuit.karate - [print] --User log Out-- 
+12:40:22.421 [pool-1-thread-5] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/user/blackout123
+1 > Accept: application/json
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+
+
+12:40:22.421 [pool-1-thread-4] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/user/logout
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+
+
+12:40:22.421 [pool-1-thread-3] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/user/login?password=pass123&username=blackout123
+1 > Accept: application/json
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+
+
+12:40:22.422 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/user/createWithList
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 347
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+[{"id":100,"username":"blackout123","firstName":"blackout","lastName":"decepticon","email":"blackout@gmail.com","password":"password123","phone":"080989999","userStatus":1},{"id":101,"username":"shockwave2","firstName":"shockwave","lastName":"decepticon","email":"shockwave@gmail.com","password":"password234","phone":"0080989998","userStatus":1}]
+
+12:40:22.422 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/user
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 171
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+{"id":100,"username":"blackout123","firstName":"blackout","lastName":"decepticon","email":"blackout@gmail.com","password":"password123","phone":"080989999","userStatus":1}
+
+12:40:23.676 [pool-1-thread-3] DEBUG com.intuit.karate - response time in milliseconds: 1248
+1 < 200
+1 < Date: Sun, 24 Dec 2023 05:40:22 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < X-Expires-After: Sun Dec 24 06:40:22 UTC 2023
+1 < X-Rate-Limit: 5000
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":200,"type":"unknown","message":"logged in user session:1703396422530"}
+
+12:40:23.676 [pool-1-thread-4] DEBUG com.intuit.karate - response time in milliseconds: 1248
+1 < 200
+1 < Date: Sun, 24 Dec 2023 05:40:22 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":200,"type":"unknown","message":"ok"}
+
+12:40:23.676 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 1247
+1 < 200
+1 < Date: Sun, 24 Dec 2023 05:40:22 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":200,"type":"unknown","message":"100"}
+
+12:40:23.676 [pool-1-thread-5] DEBUG com.intuit.karate - response time in milliseconds: 1248
+1 < 404
+1 < Date: Sun, 24 Dec 2023 05:40:22 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":1,"type":"error","message":"User not found"}
+
+12:40:23.676 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 1247
+1 < 200
+1 < Date: Sun, 24 Dec 2023 05:40:22 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":200,"type":"unknown","message":"ok"}
+
+12:40:23.683 [pool-1-thread-4] INFO  com.intuit.karate - [print] {
+  "code": 200,
+  "type": "unknown",
+  "message": "ok"
+}
+ 
+12:40:23.686 [pool-1-thread-1] INFO  com.intuit.karate - [print] {
+  "code": 200,
+  "type": "unknown",
+  "message": "100"
+}
+ 
+12:40:23.686 [pool-1-thread-2] INFO  com.intuit.karate - [print] {
+  "code": 200,
+  "type": "unknown",
+  "message": "ok"
+}
+ 
+12:40:23.691 [pool-1-thread-3] INFO  com.intuit.karate - [print] {
+  "code": 200,
+  "type": "unknown",
+  "message": "logged in user session:1703396422530"
+}
+ 
+12:40:23.693 [pool-1-thread-4] INFO  com.intuit.karate - karate.env system property was: null 
+12:40:23.696 [pool-1-thread-4] INFO  com.intuit.karate - [print] --Get User Data-- 
+12:40:23.699 [pool-1-thread-3] INFO  com.intuit.karate - karate.env system property was: null 
+12:40:23.701 [pool-1-thread-4] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/user/user1
+1 > Accept: application/json
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+
+
+12:40:23.702 [pool-1-thread-3] INFO  com.intuit.karate - [print] --Update User Data-- 
+12:40:23.707 [pool-1-thread-3] DEBUG com.intuit.karate - request:
+1 > PUT https://petstore.swagger.io/v2/user/blackout123
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 172
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+{"id":100,"username":"blackout123","firstName":"soundwave","lastName":"decepticon","email":"blackout@gmail.com","password":"password123","phone":"080989988","userStatus":1}
+
+12:40:23.715 [pool-1-thread-5] ERROR com.intuit.karate - classpath:com/api/automation/2getUserNameRequest.feature:11
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 1248, url: https://petstore.swagger.io/v2/user/blackout123, response: 
+{"code":1,"type":"error","message":"User not found"}
+classpath:com/api/automation/2getUserNameRequest.feature:11
+12:40:23.729 [pool-1-thread-2] INFO  com.intuit.karate - karate.env system property was: null 
+12:40:23.731 [pool-1-thread-2] INFO  com.intuit.karate - [print] --Delete User ID-- 
+12:40:23.733 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+1 > DELETE https://petstore.swagger.io/v2/user/shockwave2
+1 > Accept: application/json
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+
+
+12:40:24.371 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 7 (6 remaining) classpath:com/api/automation/1postCreateUser.feature
+12:40:24.395 [pool-1-thread-4] DEBUG com.intuit.karate - response time in milliseconds: 694
+1 < 404
+1 < Date: Sun, 24 Dec 2023 05:40:23 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":1,"type":"error","message":"User not found"}
+
+12:40:24.397 [pool-1-thread-4] INFO  com.intuit.karate - [print] {
+  "code": 1,
+  "type": "error",
+  "message": "User not found"
+}
+ 
+12:40:24.405 [pool-1-thread-3] DEBUG com.intuit.karate - response time in milliseconds: 698
+1 < 200
+1 < Date: Sun, 24 Dec 2023 05:40:23 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":200,"type":"unknown","message":"100"}
+
+12:40:24.407 [pool-1-thread-3] INFO  com.intuit.karate - [print] {
+  "code": 200,
+  "type": "unknown",
+  "message": "100"
+}
+ 
+12:40:24.441 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 2 of 7 (5 remaining) classpath:com/api/automation/1postCreateUserWithList.feature
+12:40:24.471 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 737
+1 < 200
+1 < Date: Sun, 24 Dec 2023 05:40:23 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":200,"type":"unknown","message":"shockwave2"}
+
+12:40:24.473 [pool-1-thread-2] INFO  com.intuit.karate - [print] {
+  "code": 200,
+  "type": "unknown",
+  "message": "shockwave2"
+}
+ 
+12:40:24.488 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 3 of 7 (4 remaining) classpath:com/api/automation/2getLoginRequest.feature
+12:40:24.524 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 4 of 7 (3 remaining) classpath:com/api/automation/2getLogoutRequest.feature
+12:40:24.579 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 5 of 7 (2 remaining) classpath:com/api/automation/2getUserNameRequest.feature
+12:40:24.628 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 6 of 7 (1 remaining) classpath:com/api/automation/3putUpdateUser.feature
+12:40:24.665 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 7 of 7 (0 remaining) classpath:com/api/automation/deleteRequest.feature
+12:41:07.614 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+12:41:07.622 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1703396467617
+12:41:07.630 [main] DEBUG com.intuit.karate.Suite - waiting for 7 features to complete
+12:41:08.774 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+12:41:08.802 [pool-1-thread-2] INFO  com.intuit.karate - karate.env system property was: null 
+12:41:08.804 [pool-1-thread-5] INFO  com.intuit.karate - karate.env system property was: null 
+12:41:08.808 [pool-1-thread-4] INFO  com.intuit.karate - karate.env system property was: null 
+12:41:08.810 [pool-1-thread-3] INFO  com.intuit.karate - karate.env system property was: null 
+12:41:08.817 [pool-1-thread-3] INFO  com.intuit.karate - [print] --User Login-- 
+12:41:08.819 [pool-1-thread-1] INFO  com.intuit.karate - [print] --Create User-- 
+12:41:08.819 [pool-1-thread-2] INFO  com.intuit.karate - [print] --Create User With List-- 
+12:41:08.817 [pool-1-thread-5] INFO  com.intuit.karate - [print] --Get User Data-- 
+12:41:08.817 [pool-1-thread-4] INFO  com.intuit.karate - [print] --User log Out-- 
+12:41:09.116 [pool-1-thread-5] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/user/blackout123
+1 > Accept: application/json
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+
+
+12:41:09.116 [pool-1-thread-3] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/user/login?password=pass123&username=blackout123
+1 > Accept: application/json
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+
+
+12:41:09.116 [pool-1-thread-4] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/user/logout
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+
+
+12:41:09.116 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/user/createWithList
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 347
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+[{"id":100,"username":"blackout123","firstName":"blackout","lastName":"decepticon","email":"blackout@gmail.com","password":"password123","phone":"080989999","userStatus":1},{"id":101,"username":"shockwave2","firstName":"shockwave","lastName":"decepticon","email":"shockwave@gmail.com","password":"password234","phone":"0080989998","userStatus":1}]
+
+12:41:09.116 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/user
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 171
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+{"id":100,"username":"blackout123","firstName":"blackout","lastName":"decepticon","email":"blackout@gmail.com","password":"password123","phone":"080989999","userStatus":1}
+
+12:41:10.364 [pool-1-thread-3] DEBUG com.intuit.karate - response time in milliseconds: 1247
+1 < 200
+1 < Date: Sun, 24 Dec 2023 05:41:09 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < X-Expires-After: Sun Dec 24 06:41:09 UTC 2023
+1 < X-Rate-Limit: 5000
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":200,"type":"unknown","message":"logged in user session:1703396469231"}
+
+12:41:10.365 [pool-1-thread-5] DEBUG com.intuit.karate - response time in milliseconds: 1247
+1 < 200
+1 < Date: Sun, 24 Dec 2023 05:41:09 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":100,"username":"blackout123","firstName":"blackout","lastName":"decepticon","email":"blackout@gmail.com","password":"password123","phone":"080989999","userStatus":1}
+
+12:41:10.364 [pool-1-thread-4] DEBUG com.intuit.karate - response time in milliseconds: 1247
+1 < 200
+1 < Date: Sun, 24 Dec 2023 05:41:09 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":200,"type":"unknown","message":"ok"}
+
+12:41:10.365 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 1247
+1 < 200
+1 < Date: Sun, 24 Dec 2023 05:41:09 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":200,"type":"unknown","message":"ok"}
+
+12:41:10.368 [pool-1-thread-2] INFO  com.intuit.karate - [print] {
+  "code": 200,
+  "type": "unknown",
+  "message": "ok"
+}
+ 
+12:41:10.369 [pool-1-thread-3] INFO  com.intuit.karate - [print] {
+  "code": 200,
+  "type": "unknown",
+  "message": "logged in user session:1703396469231"
+}
+ 
+12:41:10.371 [pool-1-thread-5] INFO  com.intuit.karate - [print] {
+  "id": 100,
+  "username": "blackout123",
+  "firstName": "blackout",
+  "lastName": "decepticon",
+  "email": "blackout@gmail.com",
+  "password": "password123",
+  "phone": "080989999",
+  "userStatus": 1
+}
+ 
+12:41:10.375 [pool-1-thread-4] INFO  com.intuit.karate - [print] {
+  "code": 200,
+  "type": "unknown",
+  "message": "ok"
+}
+ 
+12:41:10.380 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 1264
+1 < 200
+1 < Date: Sun, 24 Dec 2023 05:41:09 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":200,"type":"unknown","message":"100"}
+
+12:41:10.383 [pool-1-thread-4] INFO  com.intuit.karate - karate.env system property was: null 
+12:41:10.385 [pool-1-thread-1] INFO  com.intuit.karate - [print] {
+  "code": 200,
+  "type": "unknown",
+  "message": "100"
+}
+ 
+12:41:10.386 [pool-1-thread-3] INFO  com.intuit.karate - karate.env system property was: null 
+12:41:10.386 [pool-1-thread-4] INFO  com.intuit.karate - [print] --Update User Data-- 
+12:41:10.388 [pool-1-thread-3] INFO  com.intuit.karate - [print] --Get User Data-- 
+12:41:10.390 [pool-1-thread-4] DEBUG com.intuit.karate - request:
+1 > PUT https://petstore.swagger.io/v2/user/blackout123
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 172
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+{"id":100,"username":"blackout123","firstName":"soundwave","lastName":"decepticon","email":"blackout@gmail.com","password":"password123","phone":"080989988","userStatus":1}
+
+12:41:10.391 [pool-1-thread-3] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/user/user1
+1 > Accept: application/json
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+
+
+12:41:10.404 [pool-1-thread-2] INFO  com.intuit.karate - karate.env system property was: null 
+12:41:10.405 [pool-1-thread-2] INFO  com.intuit.karate - [print] --Delete User ID-- 
+12:41:10.408 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+1 > DELETE https://petstore.swagger.io/v2/user/shockwave2
+1 > Accept: application/json
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+
+
+12:41:11.056 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 7 (6 remaining) classpath:com/api/automation/1postCreateUser.feature
+12:41:11.103 [pool-1-thread-3] DEBUG com.intuit.karate - response time in milliseconds: 712
+1 < 404
+1 < Date: Sun, 24 Dec 2023 05:41:09 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":1,"type":"error","message":"User not found"}
+
+12:41:11.107 [pool-1-thread-3] INFO  com.intuit.karate - [print] {
+  "code": 1,
+  "type": "error",
+  "message": "User not found"
+}
+ 
+12:41:11.137 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 729
+1 < 200
+1 < Date: Sun, 24 Dec 2023 05:41:10 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":200,"type":"unknown","message":"shockwave2"}
+
+12:41:11.139 [pool-1-thread-2] INFO  com.intuit.karate - [print] {
+  "code": 200,
+  "type": "unknown",
+  "message": "shockwave2"
+}
+ 
+12:41:11.144 [pool-1-thread-4] DEBUG com.intuit.karate - response time in milliseconds: 754
+1 < 200
+1 < Date: Sun, 24 Dec 2023 05:41:10 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":200,"type":"unknown","message":"100"}
+
+12:41:11.146 [pool-1-thread-4] INFO  com.intuit.karate - [print] {
+  "code": 200,
+  "type": "unknown",
+  "message": "100"
+}
+ 
+12:41:11.193 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 2 of 7 (5 remaining) classpath:com/api/automation/1postCreateUserWithList.feature
+12:41:11.242 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 3 of 7 (4 remaining) classpath:com/api/automation/2getLoginRequest.feature
+12:41:11.287 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 4 of 7 (3 remaining) classpath:com/api/automation/2getLogoutRequest.feature
+12:41:11.350 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 5 of 7 (2 remaining) classpath:com/api/automation/2getUserNameRequest.feature
+12:41:11.387 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 6 of 7 (1 remaining) classpath:com/api/automation/3putUpdateUser.feature
+12:41:11.414 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 7 of 7 (0 remaining) classpath:com/api/automation/deleteRequest.feature
+12:41:32.613 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+12:41:33.723 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:41:33.764 [main] INFO  com.intuit.karate - [print] --Create User-- 
+12:41:34.134 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/user
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 171
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+{"id":100,"username":"blackout123","firstName":"blackout","lastName":"decepticon","email":"blackout@gmail.com","password":"password123","phone":"080989999","userStatus":1}
+
+12:41:35.607 [main] DEBUG com.intuit.karate - response time in milliseconds: 1468
+1 < 200
+1 < Date: Sun, 24 Dec 2023 05:41:34 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":200,"type":"unknown","message":"100"}
+
+12:41:35.611 [main] INFO  com.intuit.karate - [print] {
+  "code": 200,
+  "type": "unknown",
+  "message": "100"
+}
+ 
+12:43:24.126 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+12:43:24.136 [main] DEBUG com.intuit.karate.Suite - waiting for 7 features to complete
+12:43:25.285 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+12:43:25.315 [pool-1-thread-3] INFO  com.intuit.karate - karate.env system property was: null 
+12:43:25.317 [pool-1-thread-4] INFO  com.intuit.karate - karate.env system property was: null 
+12:43:25.319 [pool-1-thread-2] INFO  com.intuit.karate - karate.env system property was: null 
+12:43:25.322 [pool-1-thread-5] INFO  com.intuit.karate - karate.env system property was: null 
+12:43:25.332 [pool-1-thread-2] INFO  com.intuit.karate - [print] --Create User With List-- 
+12:43:25.333 [pool-1-thread-3] INFO  com.intuit.karate - [print] --User Login-- 
+12:43:25.332 [pool-1-thread-1] INFO  com.intuit.karate - [print] --Create User-- 
+12:43:25.334 [pool-1-thread-5] INFO  com.intuit.karate - [print] --Get User Data-- 
+12:43:25.332 [pool-1-thread-4] INFO  com.intuit.karate - [print] --User log Out-- 
+12:43:25.635 [pool-1-thread-3] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/user/login?password=pass123&username=blackout123
+1 > Accept: application/json
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+
+
+12:43:25.635 [pool-1-thread-5] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/user/blackout123
+1 > Accept: application/json
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+
+
+12:43:25.635 [pool-1-thread-4] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/user/logout
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+
+
+12:43:25.636 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/user
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 171
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+{"id":100,"username":"blackout123","firstName":"blackout","lastName":"decepticon","email":"blackout@gmail.com","password":"password123","phone":"080989999","userStatus":1}
+
+12:43:25.636 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/user/createWithList
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 347
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+[{"id":100,"username":"blackout123","firstName":"blackout","lastName":"decepticon","email":"blackout@gmail.com","password":"password123","phone":"080989999","userStatus":1},{"id":101,"username":"shockwave2","firstName":"shockwave","lastName":"decepticon","email":"shockwave@gmail.com","password":"password234","phone":"0080989998","userStatus":1}]
+
+12:43:27.001 [pool-1-thread-4] DEBUG com.intuit.karate - response time in milliseconds: 1362
+1 < 200
+1 < Date: Sun, 24 Dec 2023 05:43:25 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":200,"type":"unknown","message":"ok"}
+
+12:43:27.001 [pool-1-thread-3] DEBUG com.intuit.karate - response time in milliseconds: 1362
+1 < 200
+1 < Date: Sun, 24 Dec 2023 05:43:25 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < X-Expires-After: Sun Dec 24 06:43:25 UTC 2023
+1 < X-Rate-Limit: 5000
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":200,"type":"unknown","message":"logged in user session:1703396605865"}
+
+12:43:27.002 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 1366
+1 < 200
+1 < Date: Sun, 24 Dec 2023 05:43:25 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":200,"type":"unknown","message":"ok"}
+
+12:43:27.004 [pool-1-thread-2] INFO  com.intuit.karate - [print] {
+  "code": 200,
+  "type": "unknown",
+  "message": "ok"
+}
+ 
+12:43:27.004 [pool-1-thread-4] INFO  com.intuit.karate - [print] {
+  "code": 200,
+  "type": "unknown",
+  "message": "ok"
+}
+ 
+12:43:27.004 [pool-1-thread-3] INFO  com.intuit.karate - [print] {
+  "code": 200,
+  "type": "unknown",
+  "message": "logged in user session:1703396605865"
+}
+ 
+12:43:27.008 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 1372
+1 < 200
+1 < Date: Sun, 24 Dec 2023 05:43:25 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":200,"type":"unknown","message":"100"}
+
+12:43:27.010 [pool-1-thread-5] DEBUG com.intuit.karate - response time in milliseconds: 1373
+1 < 200
+1 < Date: Sun, 24 Dec 2023 05:43:25 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"id":100,"username":"blackout123","firstName":"blackout","lastName":"decepticon","email":"blackout@gmail.com","password":"password123","phone":"080989999","userStatus":1}
+
+12:43:27.012 [pool-1-thread-5] INFO  com.intuit.karate - [print] {
+  "id": 100,
+  "username": "blackout123",
+  "firstName": "blackout",
+  "lastName": "decepticon",
+  "email": "blackout@gmail.com",
+  "password": "password123",
+  "phone": "080989999",
+  "userStatus": 1
+}
+ 
+12:43:27.012 [pool-1-thread-4] INFO  com.intuit.karate - karate.env system property was: null 
+12:43:27.014 [pool-1-thread-1] INFO  com.intuit.karate - [print] {
+  "code": 200,
+  "type": "unknown",
+  "message": "100"
+}
+ 
+12:43:27.015 [pool-1-thread-4] INFO  com.intuit.karate - [print] --Get User Data-- 
+12:43:27.015 [pool-1-thread-3] INFO  com.intuit.karate - karate.env system property was: null 
+12:43:27.018 [pool-1-thread-3] INFO  com.intuit.karate - [print] --Update User Data-- 
+12:43:27.020 [pool-1-thread-4] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/user/user1
+1 > Accept: application/json
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+
+
+12:43:27.022 [pool-1-thread-3] DEBUG com.intuit.karate - request:
+1 > PUT https://petstore.swagger.io/v2/user/blackout123
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 172
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+{"id":100,"username":"blackout123","firstName":"soundwave","lastName":"decepticon","email":"blackout@gmail.com","password":"password123","phone":"080989988","userStatus":1}
+
+12:43:27.033 [pool-1-thread-2] INFO  com.intuit.karate - karate.env system property was: null 
+12:43:27.035 [pool-1-thread-2] INFO  com.intuit.karate - [print] --Delete User ID-- 
+12:43:27.037 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+1 > DELETE https://petstore.swagger.io/v2/user/shockwave2
+1 > Accept: application/json
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 > Accept-Encoding: gzip,deflate
+
+
+12:43:27.591 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 7 (6 remaining) classpath:com/api/automation/1postCreateUser.feature
+12:43:27.662 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 2 of 7 (5 remaining) classpath:com/api/automation/1postCreateUserWithList.feature
+12:43:27.711 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 3 of 7 (4 remaining) classpath:com/api/automation/2getLoginRequest.feature
+12:43:27.718 [pool-1-thread-3] DEBUG com.intuit.karate - response time in milliseconds: 694
+1 < 200
+1 < Date: Sun, 24 Dec 2023 05:43:26 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":200,"type":"unknown","message":"100"}
+
+12:43:27.719 [pool-1-thread-3] INFO  com.intuit.karate - [print] {
+  "code": 200,
+  "type": "unknown",
+  "message": "100"
+}
+ 
+12:43:27.773 [pool-1-thread-4] DEBUG com.intuit.karate - response time in milliseconds: 752
+1 < 404
+1 < Date: Sun, 24 Dec 2023 05:43:26 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":1,"type":"error","message":"User not found"}
+
+12:43:27.773 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 735
+1 < 200
+1 < Date: Sun, 24 Dec 2023 05:43:26 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":200,"type":"unknown","message":"shockwave2"}
+
+12:43:27.774 [pool-1-thread-2] INFO  com.intuit.karate - [print] {
+  "code": 200,
+  "type": "unknown",
+  "message": "shockwave2"
+}
+ 
+12:43:27.774 [pool-1-thread-4] INFO  com.intuit.karate - [print] {
+  "code": 1,
+  "type": "error",
+  "message": "User not found"
+}
+ 
+12:43:27.779 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 4 of 7 (3 remaining) classpath:com/api/automation/2getLogoutRequest.feature
+12:43:27.858 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 5 of 7 (2 remaining) classpath:com/api/automation/2getUserNameRequest.feature
+12:43:27.903 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 6 of 7 (1 remaining) classpath:com/api/automation/3putUpdateUser.feature
+12:43:27.929 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 7 of 7 (0 remaining) classpath:com/api/automation/deleteRequest.feature
