@@ -22,7 +22,7 @@ The goal of this project is to demonstrate API testing using Karate, a powerful 
 
 ### Dependency Configuration
 
-it will be installed automatically, and also adding the following `<dependency>`
+Add the following to your `pom.xml` `<dependency>`
 
 - [Jackson Core](https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core) 2.12.0
 
