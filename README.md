@@ -1,12 +1,11 @@
 # API Automation Practice
-
-This repository contains API automation scripts developed using the Karate framework to test the functionalities of the Pet Store API available at [Swagger Pet Store](https://petstore.swagger.io/#/).
+[![Maven Central](https://img.shields.io/maven-central/v/com.fasterxml.jackson.core/jackson-core?versionPrefix=2.12.0&label=Jackson-Core)](https://central.sonatype.com/artifact/com.fasterxml.jackson.core/jackson-core/2.12.0/overview)
 
 <a href="https://www.karatelabs.io/"><img src="https://raw.githubusercontent.com/kirksl/karate-runner/master/resources/karate.png" /></a><br />
 
 ## Overview
 
-The goal of this project is to demonstrate API testing using Karate, a powerful framework that simplifies API testing by combining API test-automation
+This repository contains API automation scripts developed using the Karate framework to test the functionalities of the Pet Store API available at [Swagger Pet Store](https://petstore.swagger.io/#/).
 
 ## Getting Started
 
@@ -47,16 +46,21 @@ Add the following to your `pom.xml` `<dependency>`
 
 1. Review the test scripts available in `src/test/java`.
 2. Run the java `Runner` file directly from the IDE, I'm using [IntelliJ IDEA](https://www.jetbrains.com/idea/) or run using the terminal using this command
+   
     ```bash
     mvn test -Dtest="Runner"
     ```
+        
     This is for running all the karate `.feature` file
+       
     ```bash
     mvn test -Dtest="RunAllTest"
     ```
-3. View the generated reports in the `target` directory for test results, 
+    
+4. View the generated reports in the `target` directory for test results, 
     example test report:
-![Screenshot_1](https://github.com/dannyhdyt/DannyHidayat-API-Automation/assets/153344198/22f9d771-f299-4873-bf90-5a67c6702e6e)
+   
+    ![Screenshot_1](https://github.com/dannyhdyt/DannyHidayat-API-Automation/assets/153344198/22f9d771-f299-4873-bf90-5a67c6702e6e)
 
 ## Resources
 
