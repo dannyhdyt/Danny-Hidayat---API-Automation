@@ -21,12 +21,12 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   capture_pageview:false,
   api_transport:'sendBeacon',
   loaded: function(posthog) { 
-    posthog.capture("report_feature",{distinct_id:"c533a656-bc9d-4550-8ac9-870d69a9dbfd",karate_version:"1.4.1",karate_meta:null});
+    posthog.capture("report_feature",{distinct_id:"c533a656-bc9d-4550-8ac9-870d69a9dbfd",karate_version:"1.4.0",karate_meta:null});
   }
 });
 </script>
 
-    <title>com.api.automation.3putUpdateUser</title>
+    <title>com.api.automation.deleteRequest</title>
   </head>
   <body>
     <div id="root-container">
@@ -49,13 +49,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2024-01-04 10:51:28 PM</div>
+    <div>2023-12-24 12:43:27 PM</div>
   </div>
 </div>
 
         <div class="nav-container">
           <div class="nav-item passed">
-            <a href="#[1:7]"><span>[1:7]</span> <span>Change firstname and phone</span></a>
+            <a href="#[1:7]"><span>[1:7]</span> <span>Delete Valid Username</span></a>
           </div>
         </div>
       </div>
@@ -64,8 +64,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
           <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
           <span class="feature-label">Feature:</span>
-          <span class="feature-path">com/api/automation/3putUpdateUser.feature</span><span class="feature-label">|</span>
-          <span class="feature-name">Update User</span>
+          <span class="feature-path">com/api/automation/deleteRequest.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Delete User</span>
           <span class="feature-description"></span>
         </div>
         <div class="scenario">
@@ -76,12 +76,12 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
               </div>
               <div class="scenario-keyword">
                 Scenario: <span>[1:7]</span>
-                <span class="scenario-name">Change firstname and phone</span>
+                <span class="scenario-name">Delete Valid Username</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>717</span>
+              <span>ms:</span>&nbsp;<span>740</span>
             </div>
           </div>
           <div class="step-row">
@@ -113,7 +113,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.4">22:51:27.897 karate.env system property was: null 
+  <div class="preformatted" data-parent="0.4">12:43:27.033 karate.env system property was: null 
 </div>   
 
   
@@ -130,10 +130,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">5</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>print &quot;--Update User Data--&quot;</span>
+        <span>And</span>&nbsp;<span>print &quot;--Delete User ID--&quot;</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -142,7 +142,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.5">22:51:27.900 [print] --Update User Data-- 
+  <div class="preformatted" data-parent="0.5">12:43:27.035 [print] --Delete User ID-- 
 </div>   
 
   
@@ -159,7 +159,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">8</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def body = {&quot;id&quot;:100,&quot;username&quot;:&quot;blackout123&quot;,&quot;firstName&quot;:&quot;soundwave&quot;,&quot;lastName&quot;:&quot;decepticon&quot;,&quot;email&quot;:&quot;blackout@gmail.com&quot;,&quot;password&quot;:&quot;password123&quot;,&quot;phone&quot;:&quot;080989988&quot;,&quot;userStatus&quot;:1}</span>
+        <span>When</span>&nbsp;<span>path &quot;/user/shockwave2&quot;</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -187,10 +187,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">9</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def header = {Accept:&#39;application/json&#39;}</span>
+        <span>And</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -211,11 +211,60 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref passed">10</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>method delete</span>
+      </div>
+    </div>
+    <div class="time-cell passed">738</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.10">12:43:27.037 request:
+1 &gt; DELETE https://petstore.swagger.io/v2/user/shockwave2
+1 &gt; Accept: application/json
+1 &gt; Host: petstore.swagger.io
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+12:43:27.773 response time in milliseconds: 735
+1 &lt; 200
+1 &lt; Date: Sun, 24 Dec 2023 05:43:26 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 &lt; Server: Jetty(9.2.9.v20150224)
+{&quot;code&quot;:200,&quot;type&quot;:&quot;unknown&quot;,&quot;message&quot;:&quot;shockwave2&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
     <div class="step-container" id="0.11">
       <div class="step-ref passed">11</div>
       
       <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>path &quot;/user/blackout123&quot;</span>
+        <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -243,178 +292,9 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">12</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>request body</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.13">
-      <div class="step-ref passed">13</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>headers header</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.14">
-      <div class="step-ref passed">14</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>method put</span>
-      </div>
-    </div>
-    <div class="time-cell passed">712</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.14">22:51:27.904 request:
-1 &gt; PUT https://petstore.swagger.io/v2/user/blackout123
-1 &gt; Accept: application/json
-1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 172
-1 &gt; Host: petstore.swagger.io
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.20)
-1 &gt; Accept-Encoding: gzip,deflate
-{&quot;id&quot;:100,&quot;username&quot;:&quot;blackout123&quot;,&quot;firstName&quot;:&quot;soundwave&quot;,&quot;lastName&quot;:&quot;decepticon&quot;,&quot;email&quot;:&quot;blackout@gmail.com&quot;,&quot;password&quot;:&quot;password123&quot;,&quot;phone&quot;:&quot;080989988&quot;,&quot;userStatus&quot;:1}
-
-22:51:28.613 response time in milliseconds: 709
-1 &lt; 200
-1 &lt; Date: Thu, 04 Jan 2024 15:51:27 GMT
-1 &lt; Content-Type: application/json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Connection: keep-alive
-1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
-1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
-1 &lt; Server: Jetty(9.2.9.v20150224)
-{&quot;code&quot;:200,&quot;type&quot;:&quot;unknown&quot;,&quot;message&quot;:&quot;100&quot;}
-
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.15">
-      <div class="step-ref passed">15</div>
-      
-      <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 200</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.16">
-      <div class="step-ref passed">16</div>
-      
-      <div class="step-cell passed">
         <span>And</span>&nbsp;<span>print response</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.16">22:51:28.615 [print] {
-  &quot;code&quot;: 200,
-  &quot;type&quot;: &quot;unknown&quot;,
-  &quot;message&quot;: &quot;100&quot;
-}
- 
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.17">
-      <div class="step-ref passed">17</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response == {code:200, type:&#39;unknown&#39;, message:&#39;100&#39;}</span>
-      </div>
-    </div>
     <div class="time-cell passed">0</div>
   </div>
 
@@ -424,7 +304,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-     
+  <div class="preformatted" data-parent="0.12">12:43:27.774 [print] {
+  &quot;code&quot;: 200,
+  &quot;type&quot;: &quot;unknown&quot;,
+  &quot;message&quot;: &quot;shockwave2&quot;
+}
+ 
+</div>   
 
   
 
