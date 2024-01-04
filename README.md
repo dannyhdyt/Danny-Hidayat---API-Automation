@@ -23,7 +23,7 @@ This repository contains API automation scripts developed using the Karate frame
 
 Add the following to your `pom.xml` `<dependency>`
 
-- [Jackson Core](https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core) 2.12.0
+- [Jackson Core](https://central.sonatype.com/artifact/com.fasterxml.jackson.core/jackson-core/2.12.0/overview) 2.12.0
 
 ```xml
 <dependency>
@@ -45,7 +45,7 @@ Add the following to your `pom.xml` `<dependency>`
 ## How to Use
 
 1. Review the test scripts available in `src/test/java`.
-2. Run the java `Runner` file directly from the IDE, I'm using [IntelliJ IDEA](https://www.jetbrains.com/idea/) or run using the terminal using this command
+2. Run the java `Runner` file directly from the IDE, I'm using [IntelliJ IDEA](https://www.jetbrains.com/idea/), or run using the terminal using this command
    
     ```bash
     mvn test -Dtest="Runner"
