@@ -17,7 +17,39 @@ This repository contains API automation scripts developed using the Karate frame
 ## Folder Structure
 
 - `src/test/java`: Contains the Karate test scripts java runner.
+
+```
+src
+└── test
+    └── java
+        ├── com
+        │   └── api
+        │       └── automation
+        │           ├── 1postCreateUser.feature
+        │           ├── 1postCreateUserWithList.feature
+        │           ├── 2getLoginRequest.feature
+        │           ├── 2getLogoutRequest.feature
+        │           ├── 2getUserNameRequest.feature
+        │           ├── 3putUpdateUser.feature
+        │           ├── RunAllTest.java
+        │           ├── Runner.java
+        │           └── deleteRequest.feature
+        ├── karate-config.js
+        └── logback-test.xml
+```
+  
 - `target`: Generated reports and logs.
+
+  ```
+    target
+    ├── karate-reports
+    │  
+    ├── karate-reports_1703397218732
+    │   
+    ├── karate-reports_1704341950049
+    │   
+    ├── karate-reports_1704341980631
+  ```
 
 ### Dependency Configuration
 
