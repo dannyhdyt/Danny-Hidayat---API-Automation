@@ -89,11 +89,12 @@ Add the following to your `pom.xml` `<dependency>`
     mvn test -Dtest="RunAllTest"
     ```
     
-4. View the generated reports in the `target` directory for test results, 
+4. View 
+the generated reports in the `target` directory for test results, 
     example test report:
-   
-    ![Screenshot_1](https://github.com/dannyhdyt/DannyHidayat-API-Automation/assets/153344198/22f9d771-f299-4873-bf90-5a67c6702e6e)
 
+   ![report](https://github.com/dannyhdyt/DannyHidayat-API-Automation/assets/153344198/49da2e3f-dc40-43cd-8166-b804d9f90fa1)
+    
 ## Resources
 
 - [Karate Documentation](https://github.com/intuit/karate)
